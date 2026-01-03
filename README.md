@@ -60,5 +60,5 @@ This is a Laravel based ecommerce system with basic functions as adding products
   Feel free to contribute to the project as it is open source
 
 
-    
-                                                                     Made with 😍 by KimWebi
+
+Made with 😍 by KimWebi
