@@ -57,6 +57,8 @@ This is a Laravel based ecommerce system with basic functions as adding products
   `php artisan serve`
 **Contributions**
 
-  Feel free to contribute to the project as it is open source.
-  
-`   Made with 😍 by KimWebi`
+  Feel free to contribute to the project as it is open source
+
+
+    
+                                                                     Made with 😍 by KimWebi
