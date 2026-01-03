@@ -35,7 +35,7 @@ This is a Laravel based ecommerce system with basic functions as adding products
   `composer install`
   `npm install && npm run dev`
   
-**3. Copy environment file and configure **
+**3. Copy environment file and configure**
 
   `cp .env.example .env`
   
