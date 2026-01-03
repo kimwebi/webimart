@@ -30,7 +30,7 @@ This is a Laravel based ecommerce system with basic functions as adding products
   
  `cd webimart`
   
-** 2. Install Dependencies**
+**2. Install Dependencies**
   
   `composer install`
   `npm install && npm run dev`
