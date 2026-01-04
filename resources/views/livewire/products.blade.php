@@ -1,7 +1,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
     @foreach($products as $product)
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="aspect-square relative h-10 w-10">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow p-5">
+            <div class="aspect-square relative h-8 w-8">
                 <img src="{{ $product->image ?? asset('images/icon.png') }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
 
             </div>
@@ -18,9 +18,12 @@
                     wire:click="addToCart({{ $product->id }})"
                     wire:loading.attr="disabled"
                     wire:target="addToCart"
-                    class="w-full bg-blue-600 ...">
-                    <span wire:loading.remove wire:target="addToCart">Add to Cart</span>
-
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+                >
+                    <span wire:loading.remove wire:target="addToCart">
+                        <i class="mdi mdi-cart-plus"></i>
+                        Add to Cart
+                    </span>
                     <span wire:loading wire:target="addToCart">Adding...</span>
                 </button>
             </div>

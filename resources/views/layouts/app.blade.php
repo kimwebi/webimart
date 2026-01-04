@@ -16,6 +16,8 @@
 
         <!-- Styles -->
         @livewireStyles
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"/>
+
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -38,7 +40,7 @@
             </main>
         </div>
         <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm border-t border-gray-200">
-            &copy; {{ date('Y') }} Crafted with 😍 by Malbuoro. All rights reserved.
+            &copy; {{ date('Y') }} Crafted with 😍 by kimwebi. All rights reserved.
             <div class="mt-2 space-x-4">
             </div>
         </footer>

@@ -37,6 +37,7 @@ class Cart extends Component
             return;
         }
 
+        //Calculate the price of the number of items added to cart
         $total = $items->sum(fn ($item) => $item->quantity * $item->product->price);
 
         $order = Order::create([
@@ -59,6 +60,9 @@ class Cart extends Component
             ]);
 
             $product->decrement('stock_quantity', $item->quantity);
+            if ($product->stock_quantity < 5) {
+                CheckLowStock::dispatch($product);
+            }
             $item->delete();
         }
 

@@ -8,16 +8,16 @@ document.addEventListener('livewire:init', () => {
             flex items-center justify-between gap-4
             transform transition-all duration-300 ease-in-out
             ${type === 'success'
-            ? 'bg-emerald-600 border border-emerald-700'
+            ? 'bg-blue-500 border border-blue-600'
             : 'bg-rose-600 border border-rose-700'}
         `;
 
         toast.innerHTML = `
-            <div class="flex-1">
+            <div class="flex-1 bg-blue-500">
                 <strong class="block text-lg">
                     ${type === 'success' ? 'Success' : 'Error'}
                 </strong>
-                <span class="text-sm opacity-90">${message}</span>
+                <span class="text-sm bg-blue-500 opacity-90">${message}</span>
             </div>
             <button class="text-white text-xl font-bold leading-none"
                     onclick="this.parentElement.remove()">×</button>

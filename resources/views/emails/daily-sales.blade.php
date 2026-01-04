@@ -2,9 +2,9 @@
     # Daily Sales Report
 
     @foreach($soldProducts as $name => $quantity)
-        - {{ $name }}: {{ $quantity }} sold<br>
+        - {{ $name }}: {{ $quantity }} sold
     @endforeach
 
-    Thanks,<br>
+    Thanks,
     {{ config('app.name') }}
 @endcomponent

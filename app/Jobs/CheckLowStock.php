@@ -5,12 +5,14 @@ namespace App\Jobs;
 use App\Mail\LowStockNotification;
 use App\Models\Product;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
 
 class CheckLowStock implements ShouldQueue
 {
-    use Queueable;
+    use Queueable, Dispatchable, InteractsWithQueue;
 
     public $product;
     public function __construct(Product $product)
@@ -23,6 +25,6 @@ class CheckLowStock implements ShouldQueue
      */
     public function handle(): void
     {
-        Mail::to('ADMIN_EMAIL', 'kimwebi14@gmail.com')->send(new LowStockNotification($this->product));
+        Mail::to(config('mail.admin_email'))->send(new LowStockNotification($this->product));
     }
 }
