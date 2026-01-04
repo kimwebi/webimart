@@ -3,6 +3,8 @@
 
     Product {{ $product->name }} has low stock: {{ $product->stock_quantity }} remaining.
 
-    Thanks,<br>
+    Please restock!
+
+    Thanks,
     {{ config('app.name') }}
 @endcomponent

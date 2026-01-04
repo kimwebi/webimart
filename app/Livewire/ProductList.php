@@ -23,6 +23,8 @@ class ProductList extends Component
 
 
         $product = Product::findOrFail($productId);
+
+        //Check if the product is out of stock before adding it to cart
         if ($product->stock_quantity < 1) {
             $this->dispatch(
                 'notify',

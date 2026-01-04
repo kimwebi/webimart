@@ -11,7 +11,7 @@
                 <th class="py-3 px-4 text-left">Date</th>
                 <th class="py-3 px-4 text-left">Total</th>
                 <th class="py-3 px-4 text-left">Status</th>
-                <th class="py-3 px-4"></th>
+                <th class="py-3 px-4">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -23,8 +23,9 @@
                     <td class="py-3 px-4">{{ $order->status ?? 'Pending' }}</td>
                     <td class="py-3 px-4">
                         <a href="{{ route('orders.show', $order->id) }}"
-                           class="text-blue-600 hover:text-blue-800 font-medium">
+                           class="text-blue-950 hover:text-blue-800 font-medium">
                             View
+                            <i class="mdi mdi-eye"></i>
                         </a>
                     </td>
                 </tr>
